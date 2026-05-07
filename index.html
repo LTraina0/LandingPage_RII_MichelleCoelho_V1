@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modelo de Regulamento Interno Inteligente | Michelle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg: #080604;
       --bg-elevated: #100C09;
-      --surface: rgba(255,255,255,0.03);
+      --surface: rgba(255, 255, 255, 0.03);
       --border: rgba(212, 175, 55, 0.18);
       --border-strong: rgba(212, 175, 55, 0.35);
       --text-primary: #FAF6F1;
@@ -25,11 +27,21 @@
       --radius-xs: 12px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    ::selection { background: rgba(234,191,101,0.25); color: #fff; }
+    ::selection {
+      background: rgba(234, 191, 101, 0.25);
+      color: #fff;
+    }
 
     body {
       font-family: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -53,12 +65,48 @@
     }
 
     /* Tipografia refinada */
-    h1, h2, h3, h4 { color: var(--text-primary); letter-spacing: -0.03em; text-wrap: balance; font-weight: 800; }
-    h1 { font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1.05; letter-spacing: -0.04em; }
-    h2 { font-size: clamp(1.6rem, 2.6vw, 2.4rem); line-height: 1.1; margin-bottom: 16px; }
-    h3 { font-size: clamp(1.05rem, 1.3vw, 1.25rem); line-height: 1.3; margin-bottom: 8px; font-weight: 700; }
-    p { margin-bottom: 1.1rem; line-height: 1.7; color: var(--text-secondary); max-width: 55ch; }
-    .lead { font-size: 1.08rem; line-height: 1.7; color: var(--text-secondary); max-width: 52ch; }
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      font-weight: 800;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+      line-height: 1.3;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 55ch;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 52ch;
+    }
 
     .gold-text {
       background: linear-gradient(135deg, #FFF2D9 0%, var(--gold) 50%, var(--gold-dim) 100%);
@@ -68,77 +116,162 @@
     }
 
     /* Layout */
-    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding-inline: clamp(18px, 4vw, 40px); position: relative; }
-    .section { padding: clamp(80px, 10vh, 140px) 0; position: relative; }
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-inline: clamp(18px, 4vw, 40px);
+      position: relative;
+    }
+
+    .section {
+      padding: clamp(80px, 10vh, 140px) 0;
+      position: relative;
+    }
 
     /* Overline */
     .overline {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
-      letter-spacing: 0.16em; color: var(--gold);
-      margin-bottom: 22px; padding: 8px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 22px;
+      padding: 8px 18px;
       border: 1px solid var(--border);
-      border-radius: 100px; background: rgba(212,175,55,0.05);
+      border-radius: 100px;
+      background: rgba(212, 175, 55, 0.05);
       backdrop-filter: blur(8px);
     }
 
     /* Botão premium */
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      min-height: 56px; padding: 0 36px; border-radius: 100px;
-      font-weight: 800; font-size: 0.82rem; line-height: 1;
-      text-transform: uppercase; letter-spacing: 0.06em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 36px;
+      border-radius: 100px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       background: linear-gradient(135deg, #FFE4A1, var(--gold), #D4A853);
-      color: #1A1200; text-decoration: none; border: none; cursor: pointer;
-      box-shadow: 0 8px 28px rgba(212,175,55,0.25), inset 0 1px 0 rgba(255,255,255,0.35);
+      color: #1A1200;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 28px rgba(212, 175, 55, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative; overflow: hidden; white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
     }
+
     .btn::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
-      transform: translateX(-100%); transition: transform 0.6s ease;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(212,175,55,0.35); }
-    .btn:hover::after { transform: translateX(100%); }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%);
+    }
 
     .btn-outline {
-      background: transparent; color: var(--gold);
+      background: transparent;
+      color: var(--gold);
       box-shadow: inset 0 0 0 1.5px var(--border-strong);
     }
-    .btn-outline:hover { background: rgba(212,175,55,0.08); }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.08);
+    }
 
     /* Section Header */
-    .section-header { max-width: 680px; margin: 0 auto 60px; text-align: center; }
-    .section-header p { margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; }
+    .section-header {
+      max-width: 680px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .section-header p {
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
 
     /* Cards premium */
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
     }
-    .card::before {
-      content: ''; position: absolute; inset: 0; border-radius: inherit;
-      background: radial-gradient(800px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(212,175,55,0.06), transparent 40%);
-      opacity: 0; transition: opacity 0.3s;
-      pointer-events: none; z-index: 2;
-    }
-    .card:hover::before { opacity: 1; }
-    .card:hover { border-color: var(--border-strong); transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.5); }
 
-    .card-body { padding: 32px; position: relative; z-index: 1; }
-    .card-img {
-      width: 100%; aspect-ratio: 16/10; background: linear-gradient(145deg, #14100C, #0A0603);
-      border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); font-size: 0.85rem; font-weight: 600; position: relative; overflow: hidden;
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 175, 55, 0.06), transparent 40%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 2;
     }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-body {
+      padding: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: linear-gradient(145deg, #14100C, #0A0603);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
     .card-img::after {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(212,175,55,0.08), transparent 60%);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08), transparent 60%);
     }
 
     /* Cream sections */
@@ -146,37 +279,93 @@
       background: linear-gradient(180deg, #F5F0EB 0%, #EBE6DF 100%);
       color: #1A1510;
     }
-    .cream h2, .cream h3 { color: #0A0603; }
-    .cream p { color: #3D352E; }
-    .cream .section-header p { color: #5A5046; }
+
+    .cream h2,
+    .cream h3 {
+      color: #0A0603;
+    }
+
+    .cream p {
+      color: #3D352E;
+    }
+
+    .cream .section-header p {
+      color: #5A5046;
+    }
+
     .cream .card {
       background: #FFFFFF;
-      border-color: rgba(10,6,3,0.06);
-      box-shadow: 0 8px 32px rgba(10,6,3,0.04);
+      border-color: rgba(10, 6, 3, 0.06);
+      box-shadow: 0 8px 32px rgba(10, 6, 3, 0.04);
     }
-    .cream .card:hover { box-shadow: 0 20px 48px rgba(10,6,3,0.08); }
-    .cream .card-img { background: linear-gradient(145deg, #F8F5EF, #E8E4DE); border-color: rgba(10,6,3,0.06); color: #9C958D; }
-    .cream .overline { color: #8A6D3B; border-color: rgba(138,109,59,0.25); background: rgba(138,109,59,0.06); }
+
+    .cream .card:hover {
+      box-shadow: 0 20px 48px rgba(10, 6, 3, 0.08);
+    }
+
+    .cream .card-img {
+      background: linear-gradient(145deg, #F8F5EF, #E8E4DE);
+      border-color: rgba(10, 6, 3, 0.06);
+      color: #9C958D;
+    }
+
+    .cream .overline {
+      color: #8A6D3B;
+      border-color: rgba(138, 109, 59, 0.25);
+      background: rgba(138, 109, 59, 0.06);
+    }
 
     /* Grids */
-    .grid { display: grid; gap: 24px; }
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     /* Checklist */
-    .checklist { list-style: none; }
+    .checklist {
+      list-style: none;
+    }
+
     .checklist li {
-      display: flex; align-items: flex-start; gap: 12px;
-      margin-bottom: 12px; font-size: 0.97rem; color: inherit;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.97rem;
+      color: inherit;
     }
+
     .checklist li::before {
-      content: "✓"; width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.2);
-      color: var(--gold); font-weight: 800; font-size: 0.75rem;
-      display: grid; place-items: center; flex-shrink: 0; margin-top: 1px;
+      content: "✓";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.75rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
-    .cream .checklist li { color: #3D352E; }
+
+    .cream .checklist li {
+      color: #3D352E;
+    }
 
     /* ============================================
        HERO - Cinematográfica
@@ -184,318 +373,885 @@
     .hero {
       position: relative;
       min-height: 100vh;
-      display: flex; align-items: center;
-      overflow: hidden; isolation: isolate;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
       padding: 120px 0 80px;
     }
 
     .hero-shapes {
-      position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
     }
+
     .hero-shapes .orb {
-      position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5;
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
     }
+
     .hero-shapes .orb-1 {
-      width: 60vw; height: 60vw; max-width: 700px; max-height: 700px;
-      background: radial-gradient(circle, rgba(212,175,55,0.18), transparent 60%);
-      top: -10%; right: -5%;
+      width: 60vw;
+      height: 60vw;
+      max-width: 700px;
+      max-height: 700px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 60%);
+      top: -10%;
+      right: -5%;
     }
+
     .hero-shapes .orb-2 {
-      width: 40vw; height: 40vw; max-width: 500px; max-height: 500px;
-      background: radial-gradient(circle, rgba(212,175,55,0.08), transparent 55%);
-      bottom: -5%; left: -10%;
+      width: 40vw;
+      height: 40vw;
+      max-width: 500px;
+      max-height: 500px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 55%);
+      bottom: -5%;
+      left: -10%;
     }
+
     .hero-grid {
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(212,175,55,0.025) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(212,175,55,0.025) 1px, transparent 1px);
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(212, 175, 55, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
       background-size: 80px 80px;
       mask-image: radial-gradient(ellipse at 70% 50%, black 10%, transparent 60%);
       -webkit-mask-image: radial-gradient(ellipse at 70% 50%, black 10%, transparent 60%);
     }
 
     .hero-inner {
-      display: grid; grid-template-columns: 1.1fr 0.9fr;
-      gap: clamp(40px, 5vw, 80px); align-items: center; position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(40px, 5vw, 80px);
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero-content { max-width: 560px; }
+    .hero-content {
+      max-width: 560px;
+    }
+
     .hero-tagline {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 0.8rem; font-weight: 700; color: var(--text-muted);
-      margin-bottom: 28px; letter-spacing: -0.01em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
     }
+
     .hero-tagline::before {
-      content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); opacity: 0.6;
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
     }
+
     .hero h1 {
       font-size: clamp(2.1rem, 3.4vw, 3.6rem);
-      line-height: 1.04; margin-bottom: 24px; max-width: 13ch;
+      line-height: 1.04;
+      margin-bottom: 24px;
+      max-width: 13ch;
     }
-    .hero .lead { margin-bottom: 36px; font-size: 1.02rem; color: var(--text-muted); max-width: 46ch; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px; }
+
+    .hero .lead {
+      margin-bottom: 36px;
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 46ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
     .hero-trust {
-      display: flex; flex-wrap: wrap; gap: 18px 28px;
-      font-size: 0.85rem; color: var(--text-muted); font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
     }
-    .hero-trust span { display: inline-flex; align-items: center; gap: 8px; }
-    .hero-trust .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.6; }
+
+    .hero-trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-trust .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.6;
+    }
 
     /* Hero Visual */
-    .hero-visual { position: relative; display: flex; justify-content: center; }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
     .hero-photo-wrap {
-      position: relative; width: min(100%, 420px); aspect-ratio: 3/4;
+      position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 3/4;
     }
+
     .hero-photo {
-      width: 100%; height: 100%; object-fit: cover; border-radius: 30px;
-      border: 1px solid rgba(212,175,55,0.2);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,175,55,0.1);
-      position: relative; z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.1);
+      position: relative;
+      z-index: 2;
     }
+
     .hero-photo-ring {
-      position: absolute; inset: -12px; border-radius: 36px; border: 1px solid rgba(212,175,55,0.08); z-index: 1;
+      position: absolute;
+      inset: -12px;
+      border-radius: 36px;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      z-index: 1;
     }
+
     .hero-photo-glow {
-      position: absolute; inset: -30%; border-radius: 50%;
-      background: radial-gradient(circle, rgba(212,175,55,0.18), transparent 65%);
-      filter: blur(50px); z-index: 0; pointer-events: none;
+      position: absolute;
+      inset: -30%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 65%);
+      filter: blur(50px);
+      z-index: 0;
+      pointer-events: none;
     }
 
     /* Float widgets */
     .float-widget {
-      position: absolute; z-index: 3;
+      position: absolute;
+      z-index: 3;
       background: rgba(14, 10, 6, 0.7);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(212,175,55,0.2);
-      border-radius: 14px; padding: 14px 16px;
-      display: flex; align-items: center; gap: 12px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
       font-size: 0.82rem;
     }
-    .float-widget-1 { top: 10%; left: -30px; animation: floatY 5s ease-in-out infinite; }
-    .float-widget-2 { bottom: 14%; right: -24px; animation: floatY 5s ease-in-out 2.5s infinite; }
+
+    .float-widget-1 {
+      top: 10%;
+      left: -30px;
+      animation: floatY 5s ease-in-out infinite;
+    }
+
+    .float-widget-2 {
+      bottom: 14%;
+      right: -24px;
+      animation: floatY 5s ease-in-out 2.5s infinite;
+    }
+
     .float-icon {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
-      border: 1px solid rgba(212,175,55,0.25);
-      display: grid; place-items: center; font-size: 1rem; color: var(--gold);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      color: var(--gold);
       flex-shrink: 0;
     }
-    .float-title { font-weight: 700; color: var(--text-primary); display: block; line-height: 1.2; }
-    .float-desc { font-size: 0.75rem; color: var(--text-muted); display: block; line-height: 1.3; margin-top: 2px; }
+
+    .float-title {
+      font-weight: 700;
+      color: var(--text-primary);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .float-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
 
     @keyframes floatY {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     /* ============================================
        SECAO PROVA SOCIAL / DEPOIMENTOS
        ============================================ */
     .testimonials-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
+
     .testimonial {
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm); padding: 32px;
+      border-radius: var(--radius-sm);
+      padding: 32px;
       transition: all 0.35s ease;
     }
-    .testimonial:hover { border-color: var(--border-strong); transform: translateY(-4px); }
-    .t-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; margin-bottom: 18px; display: block; }
-    .t-text { font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 24px; font-style: italic; }
-    .t-author { display: flex; align-items: center; gap: 14px; }
+
+    .testimonial:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-4px);
+    }
+
+    .t-stars {
+      color: var(--gold);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .t-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
     .t-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       background: linear-gradient(135deg, #1e1610, #0a0603);
       border: 1px solid var(--border);
-      display: grid; place-items: center; color: var(--text-muted); font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
     }
-    .t-name { font-weight: 700; color: var(--text-primary); font-size: 0.95rem; display: block; }
-    .t-role { font-size: 0.82rem; color: var(--text-muted); display: block; margin-top: 2px; }
+
+    .t-name {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .t-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
 
     /* ============================================
        PILHA DE VALOR (OFERTA)
        ============================================ */
     .value-row {
-      display: flex; align-items: center; gap: 16px;
-      padding: 20px 24px; border-radius: var(--radius-xs);
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.05);
-      margin-bottom: 12px; transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: var(--radius-xs);
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
     }
-    .value-row:hover { background: rgba(255,255,255,0.045); border-color: var(--border); transform: translateX(6px); }
+
+    .value-row:hover {
+      background: rgba(255, 255, 255, 0.045);
+      border-color: var(--border);
+      transform: translateX(6px);
+    }
+
     .value-ico {
-      width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
-      background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
-      border: 1px solid rgba(212,175,55,0.2);
-      display: grid; place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.04));
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      display: grid;
+      place-items: center;
     }
-    .value-ico svg { width: 22px; height: 22px; color: var(--gold); }
-    .value-meta { flex: 1; }
-    .value-meta h4 { font-size: 0.98rem; margin-bottom: 2px; font-weight: 700; }
-    .value-meta p { font-size: 0.88rem; color: var(--text-muted); margin: 0; line-height: 1.45; }
-    .value-tag { font-size: 0.75rem; font-weight: 800; color: var(--gold); background: rgba(212,175,55,0.08); padding: 6px 12px; border-radius: 100px; border: 1px solid rgba(212,175,55,0.15); white-space: nowrap; }
-    .value-tag s { opacity: 0.5; margin-right: 4px; text-decoration: line-through; font-weight: 600; }
+
+    .value-ico svg {
+      width: 22px;
+      height: 22px;
+      color: var(--gold);
+    }
+
+    .value-meta {
+      flex: 1;
+    }
+
+    .value-meta h4 {
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .value-meta p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .value-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--gold);
+      background: rgba(212, 175, 55, 0.08);
+      padding: 6px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      white-space: nowrap;
+    }
+
+    .value-tag s {
+      opacity: 0.5;
+      margin-right: 4px;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
 
     /* Bloco de preço */
     .price-block {
-      text-align: center; padding: 48px 40px; border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(35,28,20,0.6), rgba(18,14,10,0.8));
+      text-align: center;
+      padding: 48px 40px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(35, 28, 20, 0.6), rgba(18, 14, 10, 0.8));
       border: 1px solid var(--border-strong);
-      box-shadow: 0 32px 64px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04);
-      position: relative; overflow: hidden;
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      position: relative;
+      overflow: hidden;
     }
+
     .price-block::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.6;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.6;
     }
-    .price-old { text-decoration: line-through; color: var(--text-muted); font-size: 1.1rem; font-weight: 600; display: block; margin-bottom: 4px; }
-    .price-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(212,175,55,0.1); color: var(--gold); padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(212,175,55,0.25); margin-bottom: 12px; }
-    .price-now { font-size: clamp(3rem, 5.5vw, 4.5rem); font-weight: 800; color: var(--gold); line-height: 1; letter-spacing: -0.04em; text-shadow: 0 0 40px rgba(212,175,55,0.15); }
-    .price-sub { margin-top: 12px; font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 28px; }
-    .price-sub strong { color: var(--text-primary); font-weight: 700; }
+
+    .price-old {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      margin-bottom: 12px;
+    }
+
+    .price-now {
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      text-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .price-sub {
+      margin-top: 12px;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .price-sub strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
 
     /* Insight / Antes x Depois */
     .insight-card {
-      max-width: 920px; margin: 64px auto 0; padding: 40px 48px;
-      background: #FFFFFF; border-radius: var(--radius); text-align: center;
-      border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 60px rgba(10,6,3,0.05);
+      max-width: 920px;
+      margin: 64px auto 0;
+      padding: 40px 48px;
+      background: #FFFFFF;
+      border-radius: var(--radius);
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 20px 60px rgba(10, 6, 3, 0.05);
       position: relative;
     }
+
     .insight-card::after {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.5;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.5;
     }
+
     .insight-card p.lead-in {
-      font-size: clamp(1.1rem, 1.4vw, 1.25rem); color: #0A0603; font-weight: 600; margin-bottom: 28px; line-height: 1.5;
+      font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+      color: #0A0603;
+      font-weight: 600;
+      margin-bottom: 28px;
+      line-height: 1.5;
     }
 
     /* Comparativo */
     .compare {
-      display: grid; grid-template-columns: 1fr 1fr; max-width: 960px; margin: 48px auto 0;
-      border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 960px;
+      margin: 48px auto 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
     }
-    .compare-box { padding: 36px; }
-    .compare-box.before { background: #fff; border-right: 1px dashed rgba(0,0,0,0.12); }
-    .compare-box.after { background: linear-gradient(135deg, #FFFBF0, #FFF8E7); }
-    .compare-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
-    .before .compare-label { color: #B02828; background: rgba(180,40,40,0.06); }
-    .after .compare-label { color: #8A6D3B; background: rgba(138,109,59,0.1); }
-    .compare-box h4 { margin-bottom: 18px; font-size: 1.2rem; }
+
+    .compare-box {
+      padding: 36px;
+    }
+
+    .compare-box.before {
+      background: #fff;
+      border-right: 1px dashed rgba(0, 0, 0, 0.12);
+    }
+
+    .compare-box.after {
+      background: linear-gradient(135deg, #FFFBF0, #FFF8E7);
+    }
+
+    .compare-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .before .compare-label {
+      color: #B02828;
+      background: rgba(180, 40, 40, 0.06);
+    }
+
+    .after .compare-label {
+      color: #8A6D3B;
+      background: rgba(138, 109, 59, 0.1);
+    }
+
+    .compare-box h4 {
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+    }
 
     /* Sobre - Editorial */
-    .about-grid { display: grid; grid-template-columns: 0.8fr 1fr; gap: 64px; align-items: center; }
-    .about-portrait { position: relative; max-width: 360px; margin: 0 auto; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-portrait {
+      position: relative;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
     .about-portrait img {
-      width: 100%; aspect-ratio: 1; border-radius: 50%; object-fit: cover;
-      border: 1px solid rgba(212,175,55,0.2); box-shadow: 0 24px 60px rgba(0,0,0,0.4); position: relative; z-index: 2;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 2;
     }
+
     .about-portrait::before {
-      content: ''; position: absolute; inset: -20px; border-radius: 50%;
-      border: 1px solid rgba(212,175,55,0.08); z-index: 1;
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      z-index: 1;
     }
+
     .about-quote {
-      padding: 28px; border-left: 3px solid var(--gold); background: rgba(212,175,55,0.04);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-style: italic; color: var(--text-secondary);
-      margin-top: 24px; line-height: 1.65; position: relative; font-size: 1.02rem;
+      padding: 28px;
+      border-left: 3px solid var(--gold);
+      background: rgba(212, 175, 55, 0.04);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-top: 24px;
+      line-height: 1.65;
+      position: relative;
+      font-size: 1.02rem;
     }
 
     /* FAQ */
-    .faq { max-width: 800px; margin: 0 auto; }
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
     .faq-item {
-      background: #FFFFFF; border-radius: var(--radius-sm); margin-bottom: 12px;
-      border: 1px solid rgba(0,0,0,0.05); overflow: hidden;
-      display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+      background: #FFFFFF;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 0fr;
+      transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
     }
-    .faq-item[open] { grid-template-rows: auto 1fr; box-shadow: 0 12px 32px rgba(0,0,0,0.04); }
-    .faq-item > :not(summary) { overflow: hidden; }
+
+    .faq-item[open] {
+      grid-template-rows: auto 1fr;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-item> :not(summary) {
+      overflow: hidden;
+    }
+
     .faq-item summary {
-      cursor: pointer; font-weight: 700; color: #1A1510; display: flex; align-items: center; justify-content: space-between;
-      gap: 20px; list-style: none; padding: 22px 24px; font-size: 1rem; transition: color 0.2s;
+      cursor: pointer;
+      font-weight: 700;
+      color: #1A1510;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      padding: 22px 24px;
+      font-size: 1rem;
+      transition: color 0.2s;
     }
-    .faq-item summary:hover { color: #5A4A2F; }
-    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary:hover {
+      color: #5A4A2F;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
     .faq-icon {
-      width: 24px; height: 24px; border-radius: 50%; background: rgba(0,0,0,0.04);
-      display: grid; place-items: center; font-size: 1rem; transition: all 0.3s ease; flex-shrink: 0; color: #1A1510;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.04);
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      color: #1A1510;
     }
-    .faq-item[open] .faq-icon { transform: rotate(45deg); background: rgba(138,109,59,0.1); color: #8A6D3B; }
-    .faq-item p { margin: 0 24px 22px; color: #3D352E; line-height: 1.7; }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(138, 109, 59, 0.1);
+      color: #8A6D3B;
+    }
+
+    .faq-item p {
+      margin: 0 24px 22px;
+      color: #3D352E;
+      line-height: 1.7;
+    }
 
     /* CTA Final */
-    .final-cta { text-align: center; position: relative; overflow: hidden; }
+    .final-cta {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
     .final-cta::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(212,175,55,0.07), transparent 60%);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.07), transparent 60%);
       pointer-events: none;
     }
-    .final-content { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
-    .final-content h2 { margin-bottom: 20px; }
-    .final-content > p { margin: 0 auto 36px; color: var(--text-muted); }
+
+    .final-content {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-content h2 {
+      margin-bottom: 20px;
+    }
+
+    .final-content>p {
+      margin: 0 auto 36px;
+      color: var(--text-muted);
+    }
 
     /* Footer */
     .site-footer {
-      padding: 48px 0; text-align: center; border-top: 1px solid rgba(212,175,55,0.06);
-      color: var(--text-muted); font-size: 0.88rem;
+      padding: 48px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.06);
+      color: var(--text-muted);
+      font-size: 0.88rem;
     }
 
     /* Reveal animations */
-    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* Spotlight mouse tracking via JS is optional, keeping CSS only fallback */
 
     /* Responsivo */
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .hero-content { max-width: 640px; margin: 0 auto; }
-      .hero h1 { max-width: 100%; margin-left: auto; margin-right: auto; }
-      .hero .lead { margin-left: auto; margin-right: auto; }
-      .hero-actions { justify-content: center; }
-      .hero-trust { justify-content: center; }
-      .hero-visual { order: -1; max-width: 380px; margin: 0 auto; }
-      .float-widget { display: none; }
-      .about-grid { grid-template-columns: 1fr; text-align: center; gap: 48px; }
-      .about-portrait { max-width: 300px; }
-      .about-quote { text-align: left; }
-      .compare { grid-template-columns: 1fr; }
-      .compare-box.before { border-right: none; border-bottom: 1px dashed rgba(0,0,0,0.1); }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .guarantee-card { flex-direction: column; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 640px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero .lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        order: -1;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .float-widget {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 48px;
+      }
+
+      .about-portrait {
+        max-width: 300px;
+      }
+
+      .about-quote {
+        text-align: left;
+      }
+
+      .compare {
+        grid-template-columns: 1fr;
+      }
+
+      .compare-box.before {
+        border-right: none;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .guarantee-card {
+        flex-direction: column;
+      }
     }
 
     @media (max-width: 768px) {
-      body { font-size: 15px; }
-      .section { padding: 64px 0; }
-      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-      .hero { padding: 40px 0 64px; min-height: auto; }
-      .hero h1 { font-size: 2rem; }
-      .hero-photo-wrap { max-width: 300px; }
-      .price-block { padding: 36px 24px; }
-      .price-now { font-size: 3.2rem; }
-      .insight-card { padding: 28px 24px; }
-      .compare-box { padding: 28px; }
-      .value-row { flex-wrap: wrap; }
-      .value-tag { margin-left: auto; }
-      .card-img { aspect-ratio: 16/9; }
+      body {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 40px 0 64px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-photo-wrap {
+        max-width: 300px;
+      }
+
+      .price-block {
+        padding: 36px 24px;
+      }
+
+      .price-now {
+        font-size: 3.2rem;
+      }
+
+      .insight-card {
+        padding: 28px 24px;
+      }
+
+      .compare-box {
+        padding: 28px;
+      }
+
+      .value-row {
+        flex-wrap: wrap;
+      }
+
+      .value-tag {
+        margin-left: auto;
+      }
+
+      .card-img {
+        aspect-ratio: 16/9;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.85rem; }
-      .btn { width: 100%; font-size: 0.78rem; padding: 0 20px; }
-      .section-header { margin-bottom: 44px; }
+      .hero h1 {
+        font-size: 1.85rem;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 0.78rem;
+        padding: 0 20px;
+      }
+
+      .section-header {
+        margin-bottom: 44px;
+      }
     }
 
-    a:focus-visible, summary:focus-visible { outline: 2px solid rgba(212,175,55,0.5); outline-offset: 3px; }
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid rgba(212, 175, 55, 0.5);
+      outline-offset: 3px;
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-      .reveal { opacity: 1; transform: none; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="noise"></div>
@@ -513,7 +1269,8 @@
           <div class="hero-tagline">Michelle — Especialista Trabalhista</div>
           <h1>Pare de administrar sua empresa <span class="gold-text">no improviso.</span></h1>
           <p class="lead">
-            Tenha um Regulamento Interno profissional, com cláusulas estratégicas e juridicamente válidas, para reduzir conflitos e ter segurança para liderar.
+            Tenha um Regulamento Interno profissional, com cláusulas estratégicas e juridicamente válidas, para reduzir
+            conflitos e ter segurança para liderar.
           </p>
           <div class="hero-actions">
             <a href="#investimento" class="btn">Quero organizar minha empresa →</a>
@@ -558,7 +1315,8 @@
       <div class="section-header reveal">
         <span class="overline">O Risco do Improviso</span>
         <h2>Existe um problema que corrói a autoridade da empresa em silêncio</h2>
-        <p>Não começa com um processo. Não começa com uma fiscalização. E muitas vezes nem começa com um grande erro.</p>
+        <p>Não começa com um processo. Não começa com uma fiscalização. E muitas vezes nem começa com um grande erro.
+        </p>
       </div>
 
       <div class="grid grid-3">
@@ -566,21 +1324,24 @@
           <div class="card-img" style="min-height: 180px;">[FOTO]</div>
           <div class="card-body">
             <h3>O Início da Falha</h3>
-            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando o funcionário testa limite e ninguém sabe exatamente até onde ele pode ir.</p>
+            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando o funcionário
+              testa limite e ninguém sabe exatamente até onde ele pode ir.</p>
           </div>
         </div>
         <div class="card reveal">
           <div class="card-img" style="min-height: 180px;">[FOTO]</div>
           <div class="card-body">
             <h3>A Falha na Comunicação</h3>
-            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando o gestor cobra algo e ouve: "ninguém me falou isso."</p>
+            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando o gestor cobra
+              algo e ouve: "ninguém me falou isso."</p>
           </div>
         </div>
         <div class="card reveal">
           <div class="card-img" style="min-height: 180px;">[FOTO]</div>
           <div class="card-body">
             <h3>A Falha na Liderança</h3>
-            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando cada líder orienta de um jeito diferente e a equipe fica perdida.</p>
+            <p class="card-description" style="margin:0; font-size:0.95rem; color:#3D352E;">Começa quando cada líder
+              orienta de um jeito diferente e a equipe fica perdida.</p>
           </div>
         </div>
       </div>
@@ -611,13 +1372,18 @@
     <div class="container">
       <div class="grid grid-2" style="align-items: center; gap: 64px;">
         <div class="reveal">
-          <div class="img-placeholder" style="width:100%; aspect-ratio:4/5; border-radius: var(--radius);">[FOTO: MOCKUP]</div>
+          <div class="img-placeholder" style="width:100%; aspect-ratio:4/5; border-radius: var(--radius);">[FOTO:
+            MOCKUP]</div>
         </div>
         <div class="reveal">
           <span class="overline">A Solução</span>
-          <h2>Foi para evitar esse cenário que criei o <span class="gold-text">Modelo de Regulamento Interno Inteligente</span></h2>
-          <p>Um material completo, estratégico e juridicamente válido, feito para empresas que não aguentam mais desorganização, desculpas de empregado, desalinhamento interno e regras que só existem na cabeça do gestor.</p>
-          <p>Transforme cobranças soltas e orientações no improviso em um documento claro, estruturado e aplicável à rotina da sua empresa.</p>
+          <h2>Foi para evitar esse cenário que criei o <span class="gold-text">Modelo de Regulamento Interno
+              Inteligente</span></h2>
+          <p>Um material completo, estratégico e juridicamente válido, feito para empresas que não aguentam mais
+            desorganização, desculpas de empregado, desalinhamento interno e regras que só existem na cabeça do gestor.
+          </p>
+          <p>Transforme cobranças soltas e orientações no improviso em um documento claro, estruturado e aplicável à
+            rotina da sua empresa.</p>
           <p>Com mais clareza. Mais padrão. Mais autoridade. E mais segurança para conduzir a equipe.</p>
           <a href="#investimento" class="btn">Quero ter um regulamento pronto para usar →</a>
         </div>
@@ -674,7 +1440,8 @@
       <div class="section-header reveal">
         <span class="overline">Entregáveis</span>
         <h2>O que você recebe dentro do programa</h2>
-        <p>Você não recebe um arquivo genérico. Você recebe uma ferramenta prática para estruturar regras internas com mais clareza e segurança.</p>
+        <p>Você não recebe um arquivo genérico. Você recebe uma ferramenta prática para estruturar regras internas com
+          mais clareza e segurança.</p>
       </div>
 
       <div class="grid grid-2">
@@ -683,7 +1450,10 @@
           <div class="card-body">
             <h3>Modelo de Regulamento Interno completo e editável</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
-              Com cláusulas sobre: processo seletivo, admissão, jornada, cartão de ponto, hora extra, banco de horas, pagamento de salários, benefícios, ausências, faltas, licenças médicas, férias, uniforme, vestiários, comércio entre empregados, medicina e segurança do trabalho, uso de equipamentos, celular, redes sociais e proibições.
+              Com cláusulas sobre: processo seletivo, admissão, jornada, cartão de ponto, hora extra, banco de horas,
+              pagamento de salários, benefícios, ausências, faltas, licenças médicas, férias, uniforme, vestiários,
+              comércio entre empregados, medicina e segurança do trabalho, uso de equipamentos, celular, redes sociais e
+              proibições.
             </p>
           </div>
         </div>
@@ -692,7 +1462,8 @@
           <div class="card-body">
             <h3>Tutorial prático de preenchimento</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
-              Para você entender como completar e personalizar o documento sem travar, sem se perder e sem deixar pontos importantes de fora.
+              Para você entender como completar e personalizar o documento sem travar, sem se perder e sem deixar pontos
+              importantes de fora.
             </p>
           </div>
         </div>
@@ -701,7 +1472,8 @@
           <div class="card-body">
             <h3>Checklist com os itens obrigatórios</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
-              Para garantir que o regulamento interno da sua empresa seja mais seguro, mais completo e realmente funcione na prática.
+              Para garantir que o regulamento interno da sua empresa seja mais seguro, mais completo e realmente
+              funcione na prática.
             </p>
           </div>
         </div>
@@ -710,7 +1482,8 @@
           <div class="card-body">
             <h3>Encontros mensais no Zoom com a Michelle</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
-              Um espaço exclusivo para tirar dúvidas e entender melhor como aplicar o regulamento interno na realidade da sua empresa.
+              Um espaço exclusivo para tirar dúvidas e entender melhor como aplicar o regulamento interno na realidade
+              da sua empresa.
             </p>
           </div>
         </div>
@@ -726,7 +1499,8 @@
             <div class="card-body">
               <h4>Bônus 1: Como falar com os empregados para implementar</h4>
               <p style="margin:0; font-size:0.94rem; color:var(--text-muted);">
-                Saber apresentar e implementar da forma certa para gerar clareza, adesão e autoridade desde o primeiro dia.
+                Saber apresentar e implementar da forma certa para gerar clareza, adesão e autoridade desde o primeiro
+                dia.
               </p>
             </div>
           </div>
@@ -782,7 +1556,8 @@
 
       <div class="insight-card reveal" style="margin-top:48px; padding:32px;">
         <p style="margin:0; font-size:1.08rem; font-weight:600; color:#1A1510;">
-          Na prática, o empresário deixa de viver apagando incêndio por falta de regra clara e passa a conduzir a equipe com mais padrão, mais organização e mais autoridade.
+          Na prática, o empresário deixa de viver apagando incêndio por falta de regra clara e passa a conduzir a equipe
+          com mais padrão, mais organização e mais autoridade.
         </p>
       </div>
     </div>
@@ -799,7 +1574,8 @@
       <div class="testimonials-grid reveal">
         <div class="testimonial">
           <span class="t-stars">★★★★★</span>
-          <p class="t-text">"Consegui finalmente padronizar as regras da minha empresa. Antes era um caos, cada supervisor cobrava de um jeito. Agora tenho segurança para aplicar advertências sem me sentir inseguro."</p>
+          <p class="t-text">"Consegui finalmente padronizar as regras da minha empresa. Antes era um caos, cada
+            supervisor cobrava de um jeito. Agora tenho segurança para aplicar advertências sem me sentir inseguro."</p>
           <div class="t-author">
             <div class="t-avatar">RL</div>
             <div>
@@ -811,7 +1587,8 @@
 
         <div class="testimonial">
           <span class="t-stars">★★★★★</span>
-          <p class="t-text">"O modelo já vem praticamente pronto. Só personalizei para a realidade da minha loja e apliquei. Em duas semanas a equipe já entendeu que agora existe regra clara."</p>
+          <p class="t-text">"O modelo já vem praticamente pronto. Só personalizei para a realidade da minha loja e
+            apliquei. Em duas semanas a equipe já entendeu que agora existe regra clara."</p>
           <div class="t-author">
             <div class="t-avatar">FS</div>
             <div>
@@ -823,7 +1600,8 @@
 
         <div class="testimonial">
           <span class="t-stars">★★★★★</span>
-          <p class="t-text">"O encontro mensal no Zoom vale o investimento sozinho. Tirei dúvidas específicas da minha empresa e a Michelle me mostrou exatamente onde ajustar o regulamento."</p>
+          <p class="t-text">"O encontro mensal no Zoom vale o investimento sozinho. Tirei dúvidas específicas da minha
+            empresa e a Michelle me mostrou exatamente onde ajustar o regulamento."</p>
           <div class="t-author">
             <div class="t-avatar">AM</div>
             <div>
@@ -842,13 +1620,21 @@
       <div class="section-header reveal">
         <span class="overline">Investimento</span>
         <h2>Tudo o que você recebe hoje</h2>
-        <p>Cada item abaixo foi desenvolvido para eliminar a desorganização e trazer segurança jurídica para o seu dia a dia.</p>
+        <p>Cada item abaixo foi desenvolvido para eliminar a desorganização e trazer segurança jurídica para o seu dia a
+          dia.</p>
       </div>
 
       <div class="reveal" style="max-width:800px; margin:0 auto;">
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>Modelo de Regulamento Interno Inteligente</h4>
@@ -859,7 +1645,11 @@
 
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>Tutorial Prático de Preenchimento</h4>
@@ -870,7 +1660,11 @@
 
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>Checklist dos Itens Obrigatórios</h4>
@@ -881,7 +1675,11 @@
 
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>2 Bônus Exclusivos de Implementação</h4>
@@ -892,7 +1690,11 @@
 
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M23 7l-7 5 7 5V7z" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>Encontros Mensais no Zoom com a Michelle</h4>
@@ -903,7 +1705,10 @@
 
         <div class="value-row">
           <div class="value-ico">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </div>
           <div class="value-meta">
             <h4>Grupo no WhatsApp + Acesso Vitalício</h4>
@@ -924,8 +1729,10 @@
 
         <a href="#" class="btn" style="min-width:320px;">Quero garantir o meu acesso agora →</a>
 
-        <p style="margin:20px 0 0; font-size:0.85rem; color:var(--text-muted); display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
-          <span>🔒</span> Pagamento seguro <span style="opacity:.4">|</span> Acesso imediato <span style="opacity:.4">|</span> Garantia de 7 dias
+        <p
+          style="margin:20px 0 0; font-size:0.85rem; color:var(--text-muted); display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+          <span>🔒</span> Pagamento seguro <span style="opacity:.4">|</span> Acesso imediato <span
+            style="opacity:.4">|</span> Garantia de 7 dias
         </p>
       </div>
     </div>
@@ -934,15 +1741,22 @@
   <!-- ================= GARANTIA ================= -->
   <section class="section cream">
     <div class="container">
-      <div class="card guarantee-card reveal" style="display:flex; flex-direction:row; max-width:900px; margin:0 auto; align-items:center; background:#fff;">
-        <div style="width:200px; min-width:200px; background:linear-gradient(135deg, #FFFBF0, #FFF8E7); display:grid; place-items:center; padding:40px; border-right:1px solid rgba(0,0,0,0.06);">
-          <div style="width:120px; height:120px; border-radius:50%; background:linear-gradient(135deg, #FFF8E7, #F5D485); display:grid; place-items:center; color:#1A1200; font-weight:800; font-size:0.8rem; text-align:center; line-height:1.2; box-shadow:0 10px 28px rgba(212,175,55,0.2); animation:slowSpin 20s linear infinite;">
+      <div class="card guarantee-card reveal"
+        style="display:flex; flex-direction:row; max-width:900px; margin:0 auto; align-items:center; background:#fff;">
+        <div
+          style="width:200px; min-width:200px; background:linear-gradient(135deg, #FFFBF0, #FFF8E7); display:grid; place-items:center; padding:40px; border-right:1px solid rgba(0,0,0,0.06);">
+          <div
+            style="width:120px; height:120px; border-radius:50%; background:linear-gradient(135deg, #FFF8E7, #F5D485); display:grid; place-items:center; color:#1A1200; font-weight:800; font-size:0.8rem; text-align:center; line-height:1.2; box-shadow:0 10px 28px rgba(212,175,55,0.2); animation:slowSpin 20s linear infinite;">
             <div style="animation:slowSpinReverse 20s linear infinite;">7 DIAS<br>DE<br>GARANTIA</div>
           </div>
         </div>
         <div class="card-body">
-          <h3 style="font-size:1.4rem; margin-bottom:12px;">Você recebe acesso imediato e ainda conta com 7 dias de garantia</h3>
-          <p style="margin:0; font-size:0.97rem; color:#3D352E;">Você pode entrar, conhecer o material, analisar o conteúdo e entender se ele faz sentido para a sua empresa. Se dentro de 7 dias você entender que o produto não é para você, basta solicitar o reembolso dentro do prazo. Simples assim. Sem risco para tomar a decisão.</p>
+          <h3 style="font-size:1.4rem; margin-bottom:12px;">Você recebe acesso imediato e ainda conta com 7 dias de
+            garantia</h3>
+          <p style="margin:0; font-size:0.97rem; color:#3D352E;">Você pode entrar, conhecer o material, analisar o
+            conteúdo e entender se ele faz sentido para a sua empresa. Se dentro de 7 dias você entender que o produto
+            não é para você, basta solicitar o reembolso dentro do prazo. Simples assim. Sem risco para tomar a decisão.
+          </p>
         </div>
       </div>
     </div>
@@ -953,15 +1767,23 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-portrait reveal">
-          <div class="img-placeholder" style="width:100%; aspect-ratio:1; border-radius:50%; display:flex; align-items:center; justify-content:center;">[FOTO MICHELLE]</div>
+          <div class="img-placeholder"
+            style="width:100%; aspect-ratio:1; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            [FOTO MICHELLE]</div>
         </div>
         <div class="reveal">
           <span class="overline">A Especialista</span>
           <h2>Quem é Michelle?</h2>
-          <p>Michelle é especialista em Consultoria Empresarial Trabalhista e, desde 2015, ajuda empresas a estruturarem suas relações de trabalho com mais clareza, segurança e inteligência. Ao longo da sua trajetória, já impactou mais de 21 mil empresas por meio dos seus produtos, orientando empresários que desejam crescer com mais organização, proteção e visão estratégica.</p>
-          <p>Sua atuação parte de uma convicção forte: <strong style="color:var(--text-primary);">empresas sólidas não são construídas no improviso</strong>. São construídas com regras claras, liderança, estrutura e decisões inteligentes.</p>
+          <p>Michelle é especialista em Consultoria Empresarial Trabalhista e, desde 2015, ajuda empresas a estruturarem
+            suas relações de trabalho com mais clareza, segurança e inteligência. Ao longo da sua trajetória, já
+            impactou mais de 21 mil empresas por meio dos seus produtos, orientando empresários que desejam crescer com
+            mais organização, proteção e visão estratégica.</p>
+          <p>Sua atuação parte de uma convicção forte: <strong style="color:var(--text-primary);">empresas sólidas não
+              são construídas no improviso</strong>. São construídas com regras claras, liderança, estrutura e decisões
+            inteligentes.</p>
           <div class="about-quote">
-            "Seu compromisso é com empresários que rejeitam o amadorismo e entendem que gestão de pessoas e área trabalhista não são detalhe: são fundamento."
+            "Seu compromisso é com empresários que rejeitam o amadorismo e entendem que gestão de pessoas e área
+            trabalhista não são detalhe: são fundamento."
           </div>
         </div>
       </div>
@@ -978,19 +1800,24 @@
       <div class="reveal">
         <details class="faq-item">
           <summary>Esse produto serve para empresa pequena? <span class="faq-icon">+</span></summary>
-          <p>Porque muitas empresas pequenas e médias vivem os maiores desgastes internos exatamente por ainda estarem tentando se estruturar. Esperar a empresa crescer para organizar as regras costuma sair mais caro do que organizar agora.</p>
+          <p>Porque muitas empresas pequenas e médias vivem os maiores desgastes internos exatamente por ainda estarem
+            tentando se estruturar. Esperar a empresa crescer para organizar as regras costuma sair mais caro do que
+            organizar agora.</p>
         </details>
         <details class="faq-item">
           <summary>O modelo já vem pronto? <span class="faq-icon">+</span></summary>
-          <p>Sim. Você recebe o modelo pronto e editável, com tutorial prático para personalizar de acordo com a sua realidade.</p>
+          <p>Sim. Você recebe o modelo pronto e editável, com tutorial prático para personalizar de acordo com a sua
+            realidade.</p>
         </details>
         <details class="faq-item">
           <summary>Vou conseguir aplicar mesmo sem começar do zero? <span class="faq-icon">+</span></summary>
-          <p>Sim. A proposta é justamente facilitar a implementação com material pronto, checklist, bônus e encontros para tirar dúvidas.</p>
+          <p>Sim. A proposta é justamente facilitar a implementação com material pronto, checklist, bônus e encontros
+            para tirar dúvidas.</p>
         </details>
         <details class="faq-item">
           <summary>O acesso é por quanto tempo? <span class="faq-icon">+</span></summary>
-          <p>O acesso é imediato e vitalício. Você recebe todas as atualizações futuras do modelo sem pagar nada a mais por isso.</p>
+          <p>O acesso é imediato e vitalício. Você recebe todas as atualizações futuras do modelo sem pagar nada a mais
+            por isso.</p>
         </details>
       </div>
     </div>
@@ -1001,9 +1828,11 @@
     <div class="container">
       <div class="final-content reveal">
         <h2>A desorganização custa caro. Mas continuar sem regra clara pode custar ainda mais</h2>
-        <p>O Modelo de Regulamento Interno Inteligente foi criado para ajudar você a estruturar regras, alinhar o time, fortalecer sua autoridade e conduzir a equipe com mais segurança.</p>
+        <p>O Modelo de Regulamento Interno Inteligente foi criado para ajudar você a estruturar regras, alinhar o time,
+          fortalecer sua autoridade e conduzir a equipe com mais segurança.</p>
         <a href="#investimento" class="btn">Quero organizar minha empresa agora →</a>
-        <p class="final-price">Garanta agora o seu acesso por apenas <strong>R$ 147,00</strong> ou <strong>12x de R$ 15,20</strong></p>
+        <p class="final-price">Garanta agora o seu acesso por apenas <strong>R$ 147,00</strong> ou <strong>12x de R$
+            15,20</strong></p>
       </div>
     </div>
   </section>
@@ -1031,4 +1860,5 @@
     });
   </script>
 </body>
+
 </html>
