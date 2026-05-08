@@ -125,7 +125,7 @@
     }
 
     .section {
-      padding: clamp(80px, 10vh, 140px) 0;
+      padding: clamp(48px, 6vh, 90px) 0;
       position: relative;
     }
 
@@ -204,7 +204,7 @@
     /* Section Header */
     .section-header {
       max-width: 680px;
-      margin: 0 auto 60px;
+      margin: 0 auto 40px;
       text-align: center;
     }
 
@@ -760,68 +760,81 @@
     /* Bloco de preço */
     .price-block {
       text-align: center;
-      padding: 48px 40px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(35, 28, 20, 0.6), rgba(18, 14, 10, 0.8));
-      border: 1px solid var(--border-strong);
-      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      padding: clamp(40px, 8vw, 80px) clamp(20px, 4vw, 60px);
+      border-radius: 40px;
+      background: #4B4742;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
       position: relative;
       overflow: hidden;
-    }
-
-    .price-block::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0.6;
+      max-width: 940px;
+      margin: 48px auto 0;
     }
 
     .price-old {
       text-decoration: line-through;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      font-weight: 600;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 1.25rem;
+      font-weight: 500;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
     .price-tag {
       display: inline-block;
-      font-size: 0.72rem;
+      font-size: 0.82rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      background: rgba(212, 175, 55, 0.1);
+      letter-spacing: 0.08em;
+      background: rgba(234, 191, 101, 0.12);
       color: var(--gold);
-      padding: 4px 12px;
+      padding: 8px 24px;
       border-radius: 100px;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      margin-bottom: 12px;
+      border: 1px solid rgba(234, 191, 101, 0.25);
+      margin-bottom: 20px;
     }
 
     .price-now {
-      font-size: clamp(3rem, 5.5vw, 4.5rem);
+      font-size: clamp(3.8rem, 10vw, 7.5rem);
       font-weight: 800;
       color: var(--gold);
       line-height: 1;
-      letter-spacing: -0.04em;
-      text-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+      letter-spacing: -0.02em;
+      margin: 8px 0;
     }
 
     .price-sub {
-      margin-top: 12px;
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      margin-bottom: 28px;
+      margin-top: 4px;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 48px;
     }
 
     .price-sub strong {
-      color: var(--text-primary);
+      color: rgba(255, 255, 255, 0.8);
       font-weight: 700;
+    }
+
+    .trust-badges {
+      margin-top: clamp(40px, 6vw, 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 3vw, 24px);
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.88rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-badges .separator {
+      opacity: 0.25;
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .trust-badges .separator {
+        display: block;
+      }
     }
 
     /* Insight / Antes x Depois */
@@ -1175,7 +1188,7 @@
       }
 
       .section {
-        padding: 64px 0;
+        padding: 40px 0;
       }
 
       .grid-2,
@@ -1394,7 +1407,7 @@
     <div class="container">
       <div class="grid grid-2" style="align-items: center; gap: 64px;">
         <div class="reveal">
-          <img src="Imagens/mockup_01_RII.png" alt="Mockup do Regulamento" style="width:100%; max-width:600px; height:auto; object-fit:contain; display:block; margin:auto;">>
+          <img src="Imagens/Mockup_Kit_RII_MichelleCoelho.png" alt="Mockup do Regulamento" style="width:100%; max-width:700px; height:auto; object-fit:contain; display:block; margin:auto;">
         </div>
         <div class="reveal">
           <span class="overline">A Solução</span>
@@ -1467,7 +1480,9 @@
 
       <div class="grid grid-2">
         <div class="card reveal">
-          <div class="card-img" style="min-height: 200px;">[FOTO]</div>
+          <div class="card-img" style="padding:0; overflow:hidden;">
+            <img src="Imagens/Modelo de regulamento interno completo e editável.png" alt="Modelo de Regulamento Interno" style="width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:16/9;">
+          </div>
           <div class="card-body">
             <h3>Modelo de Regulamento Interno completo e editável</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
@@ -1479,7 +1494,9 @@
           </div>
         </div>
         <div class="card reveal">
-          <div class="card-img" style="min-height: 200px;">[FOTO]</div>
+          <div class="card-img" style="padding:0; overflow:hidden;">
+            <img src="Imagens/Tutorial prático de preenchimento..png" alt="Tutorial prático de preenchimento" style="width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:16/9;">
+          </div>
           <div class="card-body">
             <h3>Tutorial prático de preenchimento</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
@@ -1489,7 +1506,9 @@
           </div>
         </div>
         <div class="card reveal">
-          <div class="card-img" style="min-height: 200px;">[FOTO]</div>
+          <div class="card-img" style="padding:0; overflow:hidden;">
+            <img src="Imagens/Checklist com itens obrigatórios.png" alt="Checklist com os itens obrigatórios" style="width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:16/9;">
+          </div>
           <div class="card-body">
             <h3>Checklist com os itens obrigatórios</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
@@ -1499,7 +1518,9 @@
           </div>
         </div>
         <div class="card reveal">
-          <div class="card-img" style="min-height: 200px;">[FOTO]</div>
+          <div class="card-img" style="padding:0; overflow:hidden;">
+            <img src="Imagens/Encontros mensais no Zoom com a Michelle.jpg" alt="Encontros mensais no Zoom" style="width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:16/9;">
+          </div>
           <div class="card-body">
             <h3>Encontros mensais no Zoom com a Michelle</h3>
             <p class="card-description" style="margin:0; font-size:0.94rem; color:var(--text-muted);">
@@ -1638,15 +1659,15 @@
   <!-- ================= OFERTA ================= -->
   <section id="investimento" class="section">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header reveal" style="margin-bottom: 24px;">
         <span class="overline">Investimento</span>
         <h2>Tudo o que você recebe hoje</h2>
-        <p>Cada item abaixo foi desenvolvido para eliminar a desorganização e trazer segurança jurídica para o seu dia a
+        <p style="margin-bottom: 0;">Cada item abaixo foi desenvolvido para eliminar a desorganização e trazer segurança jurídica para o seu dia a
           dia.</p>
       </div>
 
-      <div class="reveal" style="max-width:800px; margin:0 auto 40px; display:flex; justify-content:center;">
-        <img src="Imagens/mockup_01_RII.png" alt="Mockup da Oferta" style="width:100%; max-width:600px; height:auto; object-fit:contain; display:block; margin:auto;">
+      <div class="reveal" style="max-width:900px; margin:0 auto 24px; display:flex; justify-content:center;">
+        <img src="Imagens/Mockup_Kit_RII_MichelleCoelho.png" alt="Mockup da Oferta" style="width:100%; max-width:700px; height:auto; object-fit:contain; display:block; margin:auto;">
       </div>
 
       <div class="reveal" style="max-width:800px; margin:0 auto;">
@@ -1743,24 +1764,28 @@
         </div>
       </div>
 
-      <div class="price-block reveal" style="max-width:800px; margin:48px auto 0;">
-        <span class="overline" style="margin-bottom:16px;">Oferta Especial de Lançamento</span>
-        <img src="Imagens/mockup_01_RII.png" alt="Mockup da Oferta" style="width:100%; max-width:280px; height:auto; object-fit:contain; display:block; margin:16px auto 24px;">
-        <h2 style="margin-bottom:24px;">Pronto para estruturar sua empresa com segurança?</h2>
+      <div class="price-block reveal" style="margin: 48px auto 0;">
+        <span class="overline" style="margin-bottom:40px; background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1);">Oferta Especial de Lançamento</span>
+        
+        <div style="margin-bottom:56px;">
+          <img src="Imagens/Mockup_Kit_RII_MichelleCoelho.png" alt="Mockup da Oferta" style="width:100%; max-width:650px; height:auto; object-fit:contain; display:block; margin:auto;">
+        </div>
 
-        <span class="price-old">De R$ 1.379,00</span>
-        <span class="price-tag">Economia de 89%</span>
+        <h2 style="font-size: clamp(1.8rem, 4vw, 3.2rem); margin-bottom:48px; color:#fff; line-height:1.1;">Pronto para estruturar sua empresa com segurança?</h2>
+
+        <div class="price-old">De R$ 1.379,00</div>
+        <div class="price-tag">ECONOMIA DE 89%</div>
         <div class="price-now">R$ 147,00</div>
         <p class="price-sub">ou <strong>12x de R$ 15,20</strong> no cartão</p>
 
-        <a href="#" class="btn" style="min-width:320px;">Quero garantir o meu acesso agora →</a>
+        <a href="#" class="btn" style="min-width:320px; padding: 0 48px; width: min(100%, 420px); background: #EABF65; color:#1A1200; font-size: 1.05rem; box-shadow: 0 16px 40px rgba(234, 191, 101, 0.2);">QUERO GARANTIR O MEU ACESSO AGORA →</a>
 
-        <div style="margin:24px 0 0; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
-          <span style="display:flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--text-muted);">🔒 Pagamento seguro</span>
-          <span style="width:1px; height:14px; background:rgba(255,255,255,0.15);"></span>
-          <span style="font-size:0.85rem; color:var(--text-muted);">Acesso imediato</span>
-          <span style="width:1px; height:14px; background:rgba(255,255,255,0.15);"></span>
-          <span style="font-size:0.85rem; color:var(--text-muted);">Garantia de 7 dias</span>
+        <div class="trust-badges">
+          <span>🔒 Pagamento seguro</span>
+          <span class="separator">|</span>
+          <span>Acesso imediato</span>
+          <span class="separator">|</span>
+          <span>Garantia de 7 dias</span>
         </div>
       </div>
     </div>
