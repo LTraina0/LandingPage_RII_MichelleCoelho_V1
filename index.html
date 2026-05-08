@@ -1149,7 +1149,23 @@
       }
 
       .guarantee-card {
-        flex-direction: column;
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .guarantee-seal {
+        width: 100% !important;
+        min-width: unset !important;
+        padding: 24px 32px 8px !important;
+      }
+
+      .guarantee-seal img {
+        width: 140px !important;
+        margin: 0 auto;
+      }
+
+      .guarantee-card .card-body {
+        padding: 20px 24px 28px;
       }
     }
 
@@ -1755,8 +1771,8 @@
     <div class="container">
       <div class="card guarantee-card reveal"
         style="display:flex; flex-direction:row; max-width:900px; margin:0 auto; align-items:center; background:#fff;">
-        <div
-          style="width:220px; min-width:220px; background:transparent; display:grid; place-items:center; padding:32px;">
+        <div class="guarantee-seal"
+          style="background:transparent; display:grid; place-items:center; padding:32px;">
           <img src="Imagens/selo-garantia.jpg" alt="Selo de 7 Dias de Garantia" style="width:180px; height:auto; display:block;">
         </div>
         <div class="card-body">
