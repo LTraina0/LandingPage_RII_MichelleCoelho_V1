@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/sitemap.xml

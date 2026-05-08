@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+.npm-cache/
+output/
+.playwright-mcp/
