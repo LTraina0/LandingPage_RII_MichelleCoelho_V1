@@ -141,6 +141,7 @@
     :root {
       --bg: #080604;
       --bg-elevated: #100C09;
+      --bg-base: #0A0603;
       --surface: rgba(255, 255, 255, 0.03);
       --border: rgba(212, 175, 55, 0.18);
       --border-strong: rgba(212, 175, 55, 0.35);
@@ -150,6 +151,7 @@
       --gold: #EABF65;
       --gold-light: #FAD494;
       --gold-dim: #A18348;
+      --gold-bright: #FFE4A1;
       --radius: 24px;
       --radius-sm: 16px;
       --radius-xs: 12px;
@@ -2192,6 +2194,226 @@
         transform: none;
       }
     }
+
+    /* ============================================
+       SEÇÃO SOBRE A ESPECIALISTA
+       ============================================ */
+    .about-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-base);
+    }
+
+    .about-grid-custom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .about-image-frame {
+      position: absolute;
+      inset: -15px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: var(--radius);
+      transform: rotate(-3deg);
+      z-index: -1;
+    }
+
+    .about-image-frame-2 {
+      position: absolute;
+      inset: -15px;
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      border-radius: var(--radius);
+      transform: rotate(2deg);
+      z-index: -1;
+    }
+
+    .about-image-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-image {
+      width: 100%;
+      display: block;
+      transform: scale(1.01);
+    }
+
+    .about-content .overline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 24px;
+      padding: 10px 20px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 100px;
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .about-content .overline::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--gold);
+    }
+
+    .about-content h2 {
+      margin-bottom: 24px;
+      color: var(--text-primary);
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: none;
+      margin-bottom: 20px;
+    }
+
+    .about-content p strong {
+      color: #FFF;
+    }
+
+    .about-quote-block {
+      margin-top: 12px;
+      padding: 32px;
+      border-left: 4px solid var(--gold);
+      background: linear-gradient(90deg, rgba(245, 212, 133, 0.12), transparent);
+      border-radius: 0 24px 24px 0;
+      position: relative;
+    }
+
+    .about-quote-block p {
+      margin: 0;
+      font-style: italic;
+      color: #FFF;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       RODAPÉ INSTITUCIONAL
+       ============================================ */
+    .site-footer-institutional {
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+      padding: 34px 0 30px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      background: rgba(10, 6, 3, 0.98);
+    }
+
+    .footer-logo {
+      width: min(180px, 52vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .footer-copy {
+      margin: 0 0 8px;
+      color: #FFF;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .footer-info {
+      margin: 0;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+    }
+
+    .footer-info a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .footer-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsivo para Sobre e Rodapé */
+    @media (max-width: 968px) {
+      .about-grid-custom {
+        grid-template-columns: 1fr;
+      }
+
+      .about-section {
+        padding: 72px 0;
+      }
+
+      .about-image-wrap {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-footer-institutional {
+        padding: 24px 0 18px;
+      }
+
+      .footer-logo {
+        width: min(150px, 44vw);
+        margin-bottom: 12px;
+      }
+
+      .footer-copy {
+        font-size: 0.92rem;
+        line-height: 1.4;
+      }
+
+      .footer-info {
+        font-size: 0.8rem;
+        line-height: 1.45;
+      }
+
+      .about-section {
+        padding: 56px 0;
+      }
+
+      .about-grid-custom {
+        gap: 40px;
+      }
+
+      .about-content .overline {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+      }
+
+      .about-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .about-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .about-quote-block {
+        padding: 20px;
+      }
+
+      .about-quote-block p {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
 
@@ -2794,6 +3016,54 @@
       </div>
     </div>
   </section>
+
+  <!-- ================= SOBRE A ESPECIALISTA ================= -->
+  <section id="sobre" class="about-section" aria-labelledby="sobre-title">
+    <div class="container">
+      <div class="about-grid-custom">
+        <div>
+          <div class="about-image-wrap">
+            <div class="about-image-frame" aria-hidden="true"></div>
+            <div class="about-image-frame-2" aria-hidden="true"></div>
+
+            <div class="about-image-container">
+              <img class="about-image" src="Imagens/otimizadas/michelle.webp" alt="Michelle Coelho, especialista em Consultoria Empresarial Trabalhista" width="600" height="800" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="overline">A Especialista</span>
+          <h2 id="sobre-title">Conheça a Michelle</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <p>Michelle é especialista em Consultoria Empresarial Trabalhista e, desde 2015, ajuda empresas a estruturarem suas relações de trabalho com mais clareza, segurança e inteligência. Ao longo da sua trajetória, já impactou mais de <strong>21 mil empresas</strong> por meio dos seus produtos.</p>
+
+            <p>Sua atuação parte de uma convicção forte: <strong>empresas sólidas não são construídas no improviso</strong>. São construídas com regras claras, liderança, estrutura e decisões inteligentes.</p>
+
+            <div class="about-quote-block">
+              <p>"Empresa séria não improvisa contratação. Prevenção é inteligência e segurança jurídica caminha junto com visão estratégica."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RODAPÉ INSTITUCIONAL ================= -->
+  <footer class="site-footer-institutional" aria-label="Rodapé institucional">
+    <div class="container">
+      <img class="footer-logo" src="Imagens/otimizadas/logo-michelle-coelho.webp" alt="Michelle Coelho" width="400" height="200" loading="lazy" decoding="async">
+
+      <p class="footer-copy">© 2026 Kit Contrato de Trabalho Inteligente. Todos os direitos reservados.</p>
+
+      <p class="footer-info">
+        Michelle Coelho - Consultoria Empresarial Trabalhista<br>
+        CNPJ 42.735.832/0001-04<br>
+        <a href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a>
+      </p>
+    </div>
+  </footer>
 
   </main>
 
