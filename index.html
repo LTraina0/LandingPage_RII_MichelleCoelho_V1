@@ -1278,13 +1278,16 @@
     .insight-card {
       max-width: 920px;
       margin: 64px auto 0;
-      padding: 40px 48px;
+      padding: 48px 56px;
       background: #FFFFFF;
       border-radius: var(--radius);
       text-align: center;
       border: 1px solid rgba(0, 0, 0, 0.05);
       box-shadow: 0 20px 60px rgba(10, 6, 3, 0.05);
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .insight-card::after {
@@ -1307,8 +1310,9 @@
       font-size: clamp(1.1rem, 1.4vw, 1.25rem);
       color: #0A0603;
       font-weight: 600;
-      margin-bottom: 28px;
+      margin: 0 auto 32px;
       line-height: 1.5;
+      max-width: 72ch;
     }
 
     .insight-card-copy {
@@ -1316,6 +1320,28 @@
       font-size: 1.08rem;
       font-weight: 600;
       color: #1A1510;
+    }
+
+    .insight-card .grid-2 {
+      width: 100%;
+      align-items: start;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .insight-card .checklist {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    .insight-card .checklist li {
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .insight-card .checklist li:last-child {
+      margin-bottom: 0;
     }
 
     /* Comparativo */
@@ -1858,7 +1884,12 @@
       }
 
       .insight-card {
-        padding: 28px 24px;
+        padding: 32px 24px;
+      }
+
+      .insight-card .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .compare-box {
