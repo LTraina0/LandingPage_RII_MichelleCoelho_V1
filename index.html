@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#080604">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+    content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
   <link rel="canonical" href="https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta property="og:locale" content="pt_BR">
@@ -32,12 +32,8 @@
   <meta name="twitter:description"
     content="Modelo editável, checklist, tutorial, bônus e encontros mensais para organizar regras internas com mais segurança.">
   <meta name="twitter:image"
-    content="https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/Imagens/Mockup%20da%20Oferta.png">
+    content="https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/Imagens/otimizadas/Mockup%20da%20Oferta.webp">
   <meta name="twitter:image:alt" content="Mockup do Modelo de Regulamento Interno Inteligente">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="Imagens/otimizadas/michelle-hero-figma.webp" type="image/webp"
-    fetchpriority="high">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,7 +50,7 @@
           },
           "potentialAction": {
             "@type": "BuyAction",
-            "target": "#"
+            "target": "https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/#investimento"
           }
         },
         {
@@ -70,7 +66,7 @@
           "category": "Produto digital e curso online para gestão trabalhista empresarial",
           "offers": {
             "@type": "Offer",
-            "url": "#",
+            "url": "https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/#investimento",
             "priceCurrency": "BRL",
             "price": "147.00",
             "availability": "https://schema.org/InStock",
@@ -91,7 +87,7 @@
           "inLanguage": "pt-BR",
           "offers": {
             "@type": "Offer",
-            "url": "#",
+            "url": "https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/#investimento",
             "priceCurrency": "BRL",
             "price": "147.00"
           }
@@ -138,6 +134,22 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: "Google Sans";
+      src: url("Google_Sans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans";
+      src: url("Google_Sans/GoogleSans-Italic-VariableFont_GRAD,opsz,wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
     :root {
       --bg: #080604;
       --bg-elevated: #100C09;
@@ -174,7 +186,7 @@
     }
 
     body {
-      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-family: "Google Sans", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text-secondary);
       line-height: 1.65;
@@ -373,6 +385,134 @@
       padding: 0 42px;
       font-size: 0.95rem;
       min-height: 64px;
+    }
+
+    /* Hero Figma */
+    .figma-hero {
+      position: relative;
+      min-height: 760px;
+      height: 100svh;
+      overflow: hidden;
+      isolation: isolate;
+      background: #020100;
+    }
+
+    .figma-hero__media,
+    .figma-hero__media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .figma-hero__media {
+      z-index: 0;
+    }
+
+    .figma-hero__media img {
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .figma-hero__content {
+      position: absolute;
+      left: clamp(152px, calc(43.333vw - 472px), 360px);
+      top: 47.25%;
+      width: clamp(505px, calc(6.458vw + 412px), 536px);
+      transform: translateY(-50%);
+      z-index: 1;
+      color: #F1EEEA;
+    }
+
+    .figma-hero__title {
+      margin: 0;
+      color: #F1EEEA;
+      font-size: clamp(2.7617rem, calc(0.565vw + 2.253rem), 2.9313rem);
+      line-height: 1.0475;
+      letter-spacing: 0;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+
+    .figma-hero__title .gold-text {
+      display: inline;
+      background: linear-gradient(114deg, #FFF2D9 0%, #EABF65 50%, #A18348 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .figma-hero__br-small {
+      display: none;
+    }
+
+    .figma-hero__br-tiny {
+      display: none;
+    }
+
+    .figma-hero__copy,
+    .figma-hero__fit {
+      max-width: none;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: Arial, sans-serif;
+      font-size: clamp(1.1178rem, calc(0.2288vw + 0.912rem), 1.1864rem);
+      line-height: 1.202;
+      letter-spacing: 0;
+    }
+
+    .figma-hero__copy {
+      margin-top: clamp(23.44px, calc(0.3vw + 19.12px), 24.88px);
+      font-weight: 700;
+    }
+
+    .figma-hero__fit {
+      margin-top: clamp(23.44px, calc(0.3vw + 19.12px), 24.88px);
+      font-weight: 400;
+    }
+
+    .figma-hero__actions {
+      margin-top: clamp(23.44px, calc(0.3vw + 19.12px), 24.88px);
+    }
+
+    .figma-hero__btn {
+      width: 100%;
+      min-height: clamp(54.93px, calc(0.706vw + 44.76px), 58.32px);
+      padding-inline: clamp(37.88px, calc(0.485vw + 30.9px), 40.2px);
+      font-size: clamp(0.9666rem, calc(0.1977vw + 0.789rem), 1.0259rem);
+      letter-spacing: 0.06em;
+      box-shadow: 0 10px 34px rgba(212, 175, 55, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .figma-hero__trust {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: clamp(9.37px, calc(0.12vw + 7.64px), 9.95px);
+      margin-top: clamp(13.68px, calc(0.175vw + 11.15px), 14.52px);
+      color: #D2C5BC;
+      font-size: clamp(0.6736rem, calc(0.1379vw + 0.5495rem), 0.715rem);
+      line-height: 1.65;
+      white-space: nowrap;
+    }
+
+    .figma-hero__trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: clamp(7.5px, calc(0.0958vw + 6.12px), 7.96px);
+    }
+
+    .figma-hero__trust span::before {
+      content: "";
+      width: clamp(4.69px, calc(0.06vw + 3.82px), 4.97px);
+      height: clamp(4.69px, calc(0.06vw + 3.82px), 4.97px);
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--gold);
+      opacity: 0.6;
     }
 
     /* Section Header */
@@ -676,274 +816,6 @@
 
     .cream .checklist li {
       color: #3D352E;
-    }
-
-    /* ============================================
-       HERO - Cinematográfica
-       ============================================ */
-    .hero {
-      position: relative;
-      min-height: clamp(680px, 72vw, 760px);
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      isolation: isolate;
-      padding: clamp(80px, 10vw, 120px) 0 clamp(64px, 7vw, 88px);
-    }
-
-    .hero-shapes {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
-    .hero-shapes .orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.5;
-    }
-
-    .hero-shapes .orb-1 {
-      width: 60vw;
-      height: 60vw;
-      max-width: 700px;
-      max-height: 700px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 60%);
-      top: -10%;
-      right: -5%;
-    }
-
-    .hero-shapes .orb-2 {
-      width: 40vw;
-      height: 40vw;
-      max-width: 500px;
-      max-height: 500px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 55%);
-      bottom: -5%;
-      left: -10%;
-    }
-
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(212, 175, 55, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
-      background-size: 80px 80px;
-      mask-image: radial-gradient(ellipse at 70% 50%, black 10%, transparent 60%);
-      -webkit-mask-image: radial-gradient(ellipse at 70% 50%, black 10%, transparent 60%);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 480px) minmax(360px, 420px);
-      gap: clamp(52px, 7vw, 96px);
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .hero-tagline {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin-bottom: 0;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-tagline::before {
-      content: '';
-      display: inline-block;
-      width: 28px;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.6;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.25rem, 3vw, 2.38rem);
-      line-height: 1.077;
-      margin: 0;
-      max-width: 100%;
-      letter-spacing: -0.026em;
-    }
-
-    .hero-title-white {
-      color: #F1EEEA;
-      -webkit-text-fill-color: #F1EEEA;
-    }
-
-    .hero .lead {
-      margin: 0;
-      font-size: clamp(0.94rem, 1.22vw, 0.995rem);
-      line-height: 1.29;
-      color: #FFFFFF;
-      max-width: 100%;
-    }
-
-    .hero .lead-strong {
-      font-weight: 700;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin: 27px 0 18px;
-    }
-
-    .hero-actions .btn {
-      width: 100%;
-      min-height: 52px;
-      font-size: 0.917rem;
-      letter-spacing: 0.06em;
-    }
-
-    .hero-trust {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 10px;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .hero-trust span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-trust .dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      opacity: 0.6;
-    }
-
-    /* Hero Visual */
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-photo-wrap {
-      position: relative;
-      width: min(100%, 390px);
-      aspect-ratio: 390 / 552;
-    }
-
-    .hero-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 42%;
-      border-radius: 30px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.1);
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-photo-ring {
-      position: absolute;
-      inset: -11px -12px -13px;
-      border-radius: 36px;
-      border: 1px solid rgba(212, 175, 55, 0.08);
-      z-index: 1;
-    }
-
-    .hero-photo-glow {
-      position: absolute;
-      inset: -34%;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.18), transparent 65%);
-      filter: blur(50px);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    /* Float widgets */
-    .float-widget {
-      position: absolute;
-      z-index: 3;
-      background: rgba(14, 10, 6, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 14px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-      font-size: 0.82rem;
-    }
-
-    .float-widget-1 {
-      top: 11%;
-      left: -50px;
-      animation: floatY 5s ease-in-out infinite;
-    }
-
-    .float-widget-2 {
-      bottom: 10%;
-      right: -63px;
-      animation: floatY 5s ease-in-out 2.5s infinite;
-    }
-
-    .float-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      display: grid;
-      place-items: center;
-      font-size: 1rem;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-
-    .float-title {
-      font-weight: 700;
-      color: var(--text-primary);
-      display: block;
-      line-height: 1.2;
-    }
-
-    .float-desc {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      display: block;
-      line-height: 1.3;
-      margin-top: 2px;
-    }
-
-    @keyframes floatY {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
     }
 
     /* ============================================
@@ -1605,68 +1477,6 @@
 
     /* Responsivo */
     @media (max-width: 1024px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 31px;
-      }
-
-      .hero-content {
-        max-width: 516px;
-        margin: 0 auto;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .hero h1 {
-        font-size: clamp(1.92rem, 4vw, 2.05rem);
-        line-height: 1.077;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero .lead {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-actions {
-        justify-content: center;
-        width: min(100%, 410px);
-        margin: 8px 0 8px;
-      }
-
-      .hero-trust {
-        justify-content: center;
-        gap: 8px;
-        font-size: 0.615rem;
-      }
-
-      .hero-visual {
-        order: -1;
-        max-width: 516px;
-        margin: 0 auto;
-      }
-
-      .hero-photo-wrap {
-        width: min(100%, 390px);
-        aspect-ratio: 390 / 323;
-      }
-
-      .hero-photo {
-        border-radius: 21px;
-      }
-
-      .hero-photo-ring {
-        inset: -8px -10px -9px;
-        border-radius: 25px;
-      }
-
-      .hero-photo-glow {
-        inset: -46%;
-      }
-
       .solution-inner {
         max-width: 760px;
       }
@@ -1677,38 +1487,6 @@
 
       .solution-content h2 {
         font-size: clamp(1.85rem, 4.8vw, 2.7rem);
-      }
-
-      .float-widget {
-        display: flex;
-        padding: 10px 12px;
-        gap: 8px;
-        border-radius: 10px;
-      }
-
-      .float-icon {
-        width: 25px;
-        height: 25px;
-        border-radius: 7px;
-        font-size: 0.7rem;
-      }
-
-      .float-title {
-        font-size: 0.57rem;
-      }
-
-      .float-desc {
-        font-size: 0.52rem;
-      }
-
-      .float-widget-1 {
-        top: 10%;
-        left: -56px;
-      }
-
-      .float-widget-2 {
-        right: -43px;
-        bottom: -7%;
       }
 
       .about-grid {
@@ -1771,108 +1549,6 @@
       .grid-2,
       .grid-3 {
         grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 68px 0 60px;
-        min-height: auto;
-      }
-
-      .hero h1 {
-        font-size: 30.8px;
-        line-height: 33.17px;
-        letter-spacing: -0.79px;
-      }
-
-      .hero-photo-wrap {
-        width: min(100%, 390px);
-        aspect-ratio: 390 / 323;
-      }
-
-      .hero-photo {
-        border-radius: 21px;
-      }
-
-      .hero-photo-ring {
-        inset: -8px -10px -9px;
-        border-radius: 25px;
-      }
-
-      .hero-content {
-        max-width: 516px;
-        gap: 9px;
-      }
-
-      .hero-tagline {
-        font-size: 10.11px;
-      }
-
-      .hero-tagline::before {
-        width: 22px;
-      }
-
-      .hero .lead {
-        font-size: 12.87px;
-        line-height: 16.59px;
-        letter-spacing: 0;
-      }
-
-      .hero-actions {
-        width: 100%;
-        margin: 13px 0 0;
-      }
-
-      .hero-actions .btn {
-        min-height: 42px;
-        border-radius: 73px;
-        font-size: 11.87px;
-        letter-spacing: 0.713px;
-      }
-
-      .hero-trust {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 8.7px;
-        font-size: 9.83px;
-        margin-top: 0;
-      }
-
-      .hero-trust .dot {
-        width: 4px;
-        height: 4px;
-      }
-
-      .float-widget {
-        padding: 10px 12px;
-        gap: 8px;
-        border-radius: 10px;
-      }
-
-      .float-icon {
-        width: 25px;
-        height: 25px;
-        border-radius: 7px;
-        font-size: 0.7rem;
-      }
-
-      .float-title {
-        font-size: 0.57rem;
-      }
-
-      .float-desc {
-        font-size: 0.52rem;
-        margin-top: 0;
-      }
-
-      .float-widget-1 {
-        top: 10%;
-        left: -56px;
-      }
-
-      .float-widget-2 {
-        right: -43px;
-        bottom: -7%;
       }
 
       .price-block {
@@ -2093,108 +1769,10 @@
     }
 
     @media (max-width: 480px) {
-      .hero {
-        padding: 68px 0 60px;
-      }
-
-      .hero-inner {
-        gap: 19px;
-      }
-
-      .hero-content {
-        max-width: 328px;
-        gap: 12px;
-      }
-
-      .hero h1 {
-        font-size: 29.1px;
-        line-height: 30.46px;
-      }
-
-      .hero-photo-wrap {
-        width: min(100%, 250px);
-        aspect-ratio: 250 / 207;
-      }
-
-      .hero-photo {
-        border-radius: 13.5px;
-      }
-
-      .hero-photo-ring {
-        inset: -5px -7px -6px;
-        border-radius: 16px;
-      }
-
-      .hero-tagline {
-        font-size: 9.87px;
-      }
-
-      .hero .lead {
-        font-size: 11.25px;
-        line-height: 17.19px;
-        letter-spacing: -0.1px;
-        max-width: 300px;
-      }
-
       .btn {
         width: 100%;
         font-size: 0.78rem;
         padding: 0 20px;
-      }
-
-      .hero-actions {
-        width: min(100%, 300px);
-      }
-
-      .hero-actions .btn {
-        min-height: 54px;
-        border-radius: 20px;
-        font-size: 10.8px;
-        letter-spacing: 0.38px;
-        padding: 0 12px;
-      }
-
-      .hero-trust {
-        flex-direction: column;
-        gap: 4px;
-        font-size: 10.8px;
-        margin-top: 15px;
-      }
-
-      .hero-trust .dot {
-        width: 4px;
-        height: 4px;
-      }
-
-      .float-widget {
-        padding: 6.6px 7.5px;
-        gap: 5.4px;
-        border-radius: 6.3px;
-      }
-
-      .float-icon {
-        width: 16px;
-        height: 16px;
-        border-radius: 4.5px;
-        font-size: 0.45rem;
-      }
-
-      .float-title {
-        font-size: 5.88px;
-      }
-
-      .float-desc {
-        font-size: 5.38px;
-      }
-
-      .float-widget-1 {
-        top: 12%;
-        left: -35px;
-      }
-
-      .float-widget-2 {
-        right: -21px;
-        bottom: -6%;
       }
 
       .section-header {
@@ -2452,6 +2030,399 @@
         font-size: 1.05rem;
       }
     }
+
+    @media (max-width: 1024px) {
+      .figma-hero {
+        min-height: 100svh;
+      }
+
+      .figma-hero__media img {
+        object-fit: cover;
+      }
+
+      .figma-hero__content {
+        left: 50%;
+        top: 47.8%;
+        width: min(82.6vw, 614px);
+        transform: translateX(-50%);
+        text-align: center;
+      }
+
+      .figma-hero__title {
+        font-size: clamp(2.35rem, 5.2vw, 2.65rem);
+        line-height: 1.078;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        font-size: clamp(1.18rem, 2.75vw, 1.29rem);
+        line-height: 1.215;
+      }
+
+      .figma-hero__copy {
+        margin-top: 22px;
+      }
+
+      .figma-hero__fit {
+        margin-top: 30px;
+      }
+
+      .figma-hero__actions {
+        margin-top: 31px;
+      }
+
+      .figma-hero__btn {
+        min-height: 64px;
+        width: min(100%, 514px);
+        font-size: 1.13rem;
+      }
+
+      .figma-hero__trust {
+        justify-content: center;
+        margin-top: 16px;
+        gap: 11px;
+        font-size: 0.79rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1180px) and (orientation: landscape) {
+      .figma-hero {
+        min-height: 100svh;
+      }
+
+      .figma-hero__content {
+        left: 10.65vw;
+        top: calc(50% - 1px);
+        width: 39.49vw;
+        transform: translateY(-50%);
+        text-align: left;
+      }
+
+      .figma-hero__title {
+        font-size: 3.455vw;
+        line-height: 1.048;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        font-size: 1.398vw;
+        line-height: 1.202;
+      }
+
+      .figma-hero__copy {
+        margin-top: 20px;
+      }
+
+      .figma-hero__fit {
+        margin-top: 14px;
+      }
+
+      .figma-hero__actions {
+        margin-top: 29px;
+      }
+
+      .figma-hero__btn {
+        min-height: 48.5px;
+        width: 100%;
+        font-size: 1.21vw;
+      }
+
+      .figma-hero__trust {
+        justify-content: flex-start;
+        margin-top: 16px;
+        gap: 8px;
+        font-size: 0.843vw;
+      }
+    }
+
+    @media (min-width: 2200px) and (max-aspect-ratio: 2/1) {
+      .figma-hero__content {
+        left: 13.125vw;
+        top: 50.02%;
+        width: 32.54vw;
+      }
+
+      .figma-hero__title {
+        font-size: 2.847vw;
+        line-height: 1.0476;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        font-size: 1.152vw;
+        line-height: 1.201;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit,
+      .figma-hero__actions {
+        margin-top: 1.821vw;
+      }
+
+      .figma-hero__btn {
+        min-height: 3.525vw;
+        padding-inline: 2.44vw;
+        font-size: 0.9965vw;
+      }
+
+      .figma-hero__trust {
+        gap: 0.604vw;
+        margin-top: 0.881vw;
+        font-size: 0.6945vw;
+      }
+
+      .figma-hero__trust span {
+        gap: 0.483vw;
+      }
+
+      .figma-hero__trust span::before {
+        width: 0.302vw;
+        height: 0.302vw;
+      }
+    }
+
+    @media (min-width: 2200px) and (min-aspect-ratio: 2/1) {
+      .figma-hero__media img {
+        width: 100.05%;
+        height: 130.25%;
+        top: -15.09%;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        object-fit: fill;
+      }
+
+      .figma-hero__content {
+        left: 336px;
+        top: 50%;
+        width: 833px;
+      }
+
+      .figma-hero__title {
+        font-size: 72.887px;
+        line-height: 1.0476;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        font-size: 29.502px;
+        line-height: 1.201;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit,
+      .figma-hero__actions {
+        margin-top: 46.623px;
+      }
+
+      .figma-hero__btn {
+        min-height: 90.242px;
+        padding-inline: 62.475px;
+        font-size: 25.511px;
+      }
+
+      .figma-hero__trust {
+        gap: 15.46px;
+        margin-top: 22.56px;
+        font-size: 17.779px;
+      }
+
+      .figma-hero__trust span {
+        gap: 12.368px;
+      }
+
+      .figma-hero__trust span::before {
+        width: 7.73px;
+        height: 7.73px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .figma-hero {
+        height: auto;
+        min-height: 100svh;
+        padding: clamp(300px, 39svh, 382px) 0 clamp(28px, 8vw, 56px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .figma-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-image: url("Imagens/figma-hero/hero-mobile-1080x1920.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        pointer-events: none;
+      }
+
+      .figma-hero__media {
+        display: none;
+      }
+
+      .figma-hero__content {
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 1;
+        width: min(88vw, 440px);
+        margin: 0 auto;
+        transform: none;
+        text-align: center;
+      }
+
+      .figma-hero__title {
+        font-size: clamp(1.56rem, 6.85vw, 2.02rem);
+        line-height: 1.08;
+        text-wrap: balance;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        width: min(100%, 352px);
+        margin-inline: auto;
+        font-size: clamp(0.66rem, 2.75vw, 0.85rem);
+        line-height: 1.16;
+      }
+
+      .figma-hero__copy {
+        margin-top: clamp(18px, 4.8vw, 26px);
+      }
+
+      .figma-hero__fit {
+        margin-top: clamp(12px, 3.6vw, 20px);
+      }
+
+      .figma-hero__actions {
+        margin-top: clamp(18px, 5vw, 28px);
+      }
+
+      .figma-hero__btn {
+        width: min(100%, 352px);
+        min-height: clamp(43px, 11.2vw, 52px);
+        padding-inline: clamp(18px, 5vw, 30px);
+        font-size: clamp(0.64rem, 2.6vw, 0.8rem);
+        white-space: normal;
+      }
+
+      .figma-hero__trust {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: min(100%, 352px);
+        margin-inline: auto;
+        gap: 7px 12px;
+        margin-top: clamp(10px, 3vw, 16px);
+        font-size: clamp(0.48rem, 2.05vw, 0.64rem);
+        line-height: 1.25;
+        white-space: normal;
+      }
+
+      .figma-hero__trust span {
+        gap: clamp(4px, 1.2vw, 7px);
+      }
+
+      .figma-hero__trust span::before {
+        width: clamp(3.5px, 0.95vw, 5px);
+        height: clamp(3.5px, 0.95vw, 5px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .figma-hero {
+        justify-content: flex-start;
+      }
+
+      .figma-hero__media img {
+        object-position: center top;
+      }
+
+      .figma-hero__content {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
+        padding-inline: 20px;
+      }
+
+      .figma-hero__title {
+        left: auto;
+        width: 100%;
+        max-width: 314px;
+        margin-inline: auto;
+        transform: none;
+        font-size: clamp(1.42rem, 6.3vw, 1.58rem);
+        line-height: 1.08;
+      }
+
+      .figma-hero__br-small {
+        display: block;
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        left: auto;
+        width: 100%;
+        max-width: 300px;
+        transform: none;
+        font-size: clamp(0.56rem, 2.45vw, 0.62rem);
+        line-height: 1.15;
+        margin-inline: auto;
+      }
+
+      .figma-hero__actions {
+        left: auto;
+        width: 100%;
+        max-width: 320px;
+        margin-inline: auto;
+        transform: none;
+      }
+
+      .figma-hero__btn {
+        width: 100%;
+        font-size: clamp(0.58rem, 2.7vw, 0.7rem);
+        letter-spacing: 0.055em;
+      }
+
+      .figma-hero__trust {
+        left: auto;
+        width: 100%;
+        max-width: 320px;
+        transform: none;
+        font-size: clamp(0.42rem, 1.85vw, 0.49rem);
+      }
+    }
+
+    @media (max-width: 374px) {
+      .figma-hero {
+        padding-top: clamp(252px, 37svh, 300px);
+      }
+
+      .figma-hero__title {
+        width: 100%;
+        max-width: 288px;
+        font-size: clamp(1.26rem, 6.15vw, 1.38rem);
+      }
+
+      .figma-hero__copy,
+      .figma-hero__fit {
+        width: 100%;
+        max-width: 276px;
+        font-size: clamp(0.52rem, 2.42vw, 0.58rem);
+      }
+
+      .figma-hero__actions,
+      .figma-hero__trust {
+        width: 100%;
+        max-width: 288px;
+      }
+
+      .figma-hero__btn {
+        min-height: 40px;
+        font-size: 0.56rem;
+      }
+    }
   </style>
 </head>
 
@@ -2461,59 +2432,49 @@
   <div class="noise" aria-hidden="true"></div>
 
   <main id="conteudo-principal">
-  <!-- ================= HERO ================= -->
-  <header class="hero" aria-labelledby="hero-title" role="banner">
-    <div class="hero-shapes" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="hero-grid"></div>
-    </div>
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <div class="hero-tagline">Michelle — Especialista Trabalhista</div>
-          <h1 id="hero-title"><span class="hero-title-white">Defina regras claras para a sua empresa, reduza conflitos e tenha </span><span class="gold-text">mais segurança para conduzir a equipe</span></h1>
-          <p class="lead lead-strong">Tenha acesso ao Modelo de Regulamento Interno Inteligente, com cláusulas estratégicas, tutorial prático, checklist, bônus de implementação, encontros mensais no Zoom e atualizações para você parar de administrar sua empresa no improviso.</p>
-          <p class="lead">Ideal para empresários de pequenas e médias empresas que querem organizar a rotina, alinhar a equipe e ter mais segurança para cobrar, corrigir e conduzir o time.</p>
-          <div class="hero-actions">
-            <a href="#" class="btn" 
-              rel="noopener noreferrer">Quero organizar minha empresa →</a>
-          </div>
-          <div class="hero-trust">
-            <span><span class="dot"></span> 7 dias de garantia</span>
-            <span><span class="dot"></span> Acesso imediato e vitalício</span>
-            <span><span class="dot"></span> +21 mil empresas impactadas</span>
-          </div>
-        </div>
+  <!-- ================= HERO FIGMA ================= -->
+  <section class="figma-hero" aria-labelledby="hero-title">
+    <picture class="figma-hero__media" aria-hidden="true">
+      <source media="(max-width: 480px)" srcset="Imagens/figma-hero/hero-mobile-390x844.png">
+      <source media="(max-width: 768px)" srcset="Imagens/figma-hero/hero-mobile-1080x1920.png">
+      <source media="(min-width: 769px) and (max-width: 1180px) and (orientation: landscape)"
+        srcset="Imagens/figma-hero/hero-tablet-horizontal.png">
+      <source media="(min-width: 769px) and (max-width: 1180px) and (orientation: portrait)"
+        srcset="Imagens/figma-hero/hero-tablet-vertical.png">
+      <source media="(min-width: 2200px) and (min-aspect-ratio: 2/1)"
+        srcset="Imagens/figma-hero/hero-desktop-3440x1442.png">
+      <source media="(min-width: 2200px)" srcset="Imagens/figma-hero/hero-desktop-2560x1606.png">
+      <source media="(min-width: 1181px) and (max-width: 1600px)"
+        srcset="Imagens/figma-hero/hero-desktop-1440x1024.png">
+      <img src="Imagens/figma-hero/hero-desktop-1920x1080.png" alt="" width="1920" height="1080"
+        fetchpriority="high" decoding="async">
+    </picture>
 
-        <div class="hero-visual">
-          <div class="hero-photo-wrap">
-            <div class="hero-photo-glow" aria-hidden="true"></div>
-            <div class="hero-photo-ring" aria-hidden="true"></div>
-            <img class="hero-photo" src="Imagens/otimizadas/michelle-hero-figma.webp"
-              alt="Michelle Coelho, especialista em consultoria empresarial trabalhista do Modelo de Regulamento Interno Inteligente"
-              width="1376" height="768" decoding="async" fetchpriority="high">
-
-            <div class="float-widget float-widget-1">
-              <div class="float-icon" aria-hidden="true">✓</div>
-              <div>
-                <span class="float-title">Modelo Validado</span>
-                <span class="float-desc">Juridicamente seguro</span>
-              </div>
-            </div>
-
-            <div class="float-widget float-widget-2">
-              <div class="float-icon" aria-hidden="true">★</div>
-              <div>
-                <span class="float-title">Encontros Mensais</span>
-                <span class="float-desc">Tire suas dúvidas ao vivo</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="figma-hero__content">
+      <h1 id="hero-title" class="figma-hero__title">
+        Defina regras claras<br class="figma-hero__br-small"> para a sua empresa,<br class="figma-hero__br-small">
+        reduza conflitos e tenha<br class="figma-hero__br-small">
+        <span class="gold-text">mais segurança<br class="figma-hero__br-small"> para conduzir a equipe</span>
+      </h1>
+      <p class="figma-hero__copy">
+        Tenha acesso ao Modelo de Regulamento Interno Inteligente, com cláusulas estratégicas, tutorial prático,
+        checklist, bônus de implementação, encontros mensais no Zoom e atualizações para você parar de administrar sua
+        empresa no improviso.
+      </p>
+      <p class="figma-hero__fit">
+        Ideal para empresários de pequenas e médias empresas que querem organizar a rotina, alinhar a equipe e ter mais
+        segurança para cobrar, corrigir e conduzir o time.
+      </p>
+      <div class="figma-hero__actions">
+        <a href="#investimento" class="btn figma-hero__btn" rel="noopener noreferrer">Quero organizar minha empresa →</a>
+      </div>
+      <div class="figma-hero__trust" aria-label="Garantias e benefícios">
+        <span>7 dias de garantia</span>
+        <span>Acesso imediato e vitalício</span>
+        <span>+21 mil empresas impactadas</span>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- ================= PROBLEMA ================= -->
   <section class="section cream" aria-labelledby="problema-title">
@@ -2599,7 +2560,7 @@
         <div class="solution-content reveal">
           <h2 id="solucao-title">Foi para evitar esse cenário que criei o <span class="gold-text">Modelo de Regulamento Interno Inteligente</span></h2>
           <p class="solution-copy">Um material completo, estratégico e juridicamente válido, feito para empresas que não aguentam mais desorganização, desculpas de empregado, desalinhamento interno e regras que só existem na cabeça do gestor. Transforme cobranças soltas e orientações no improviso em um documento claro, estruturado e aplicável à rotina da sua empresa. Com mais clareza. Mais padrão. Mais autoridade. E mais segurança para conduzir a equipe.</p>
-          <a href="#" class="btn" 
+          <a href="#investimento" class="btn" 
             rel="noopener noreferrer">Quero ter um regulamento →</a>
         </div>
       </div>
@@ -2971,7 +2932,7 @@
         <div class="price-now">R$ 147,00</div>
         <p class="price-sub">ou <strong>12x de R$ 15,20</strong> no cartão</p>
 
-        <a href="#" class="btn btn--wide" 
+        <a href="#investimento" class="btn btn--wide" 
           rel="noopener noreferrer">GARANTIR O MEU ACESSO AGORA →</a>
 
         <div class="trust-badges">
@@ -3047,7 +3008,7 @@
         <p>O Modelo de Regulamento Interno Inteligente foi criado para ajudar você a estruturar regras, alinhar o time,
           fortalecer sua autoridade e conduzir a equipe com mais segurança.</p>
         <div class="final-actions">
-          <a href="#" class="btn btn--final" 
+          <a href="#investimento" class="btn btn--final" 
             rel="noopener noreferrer">Organizar minha empresa agora →</a>
         </div>
         <p class="final-price">Garanta agora o seu acesso por apenas <strong class="gold-text final-price-amount">R$ 147,00</strong> ou <strong class="final-price-installments">12x de R$ 15,20</strong></p>
@@ -3094,7 +3055,7 @@
       <div class="footer-content">
         <img class="footer-logo" src="Imagens/otimizadas/logo-michelle-coelho.webp" alt="Michelle Coelho" width="400" height="200" loading="lazy" decoding="async">
 
-        <p class="footer-copy">© 2026 Kit Contrato de Trabalho Inteligente. Todos os direitos reservados.</p>
+        <p class="footer-copy">© 2026 Modelo de Regulamento Interno Inteligente. Todos os direitos reservados.</p>
 
         <p class="footer-info">
           Michelle Coelho - Consultoria Empresarial Trabalhista<br>

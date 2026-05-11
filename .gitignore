@@ -1,5 +1,4 @@
-# Local Netlify folder
-.netlify
-.npm-cache/
+# Arquivos locais de trabalho
 output/
 .playwright-mcp/
+server.*.log

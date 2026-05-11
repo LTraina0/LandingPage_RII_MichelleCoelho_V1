@@ -43,5 +43,5 @@ Pergunta: O acesso é por quanto tempo?
 Resposta: O acesso é imediato e vitalício, incluindo atualizações futuras do modelo sem custo adicional.
 
 ## CTA principal
-Garanta o acesso ao Modelo de Regulamento Interno Inteligente:
-https://kit.cursodescomplicandosites.com.br/
+Garanta o acesso ao Modelo de Regulamento Interno Inteligente pela página oficial:
+https://ltraina0.github.io/LandingPage_RII_MichelleCoelho_V1/
