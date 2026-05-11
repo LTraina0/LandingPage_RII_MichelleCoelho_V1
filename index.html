@@ -2312,22 +2312,29 @@
        ============================================ */
     .site-footer-institutional {
       border-top: 1px solid rgba(212, 175, 55, 0.12);
-      padding: 34px 0 30px;
+      padding: 40px 0 30px;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.9rem;
       background: rgba(10, 6, 3, 0.98);
     }
 
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
     .footer-logo {
       width: min(180px, 52vw);
       height: auto;
       display: block;
-      margin: 0 auto 16px;
+      margin: 0 auto;
     }
 
     .footer-copy {
-      margin: 0 0 8px;
+      margin: 0;
       color: #FFF;
       font-weight: 700;
       line-height: 1.55;
@@ -3053,15 +3060,17 @@
   <!-- ================= RODAPÉ INSTITUCIONAL ================= -->
   <footer class="site-footer-institutional" aria-label="Rodapé institucional">
     <div class="container">
-      <img class="footer-logo" src="Imagens/otimizadas/logo-michelle-coelho.webp" alt="Michelle Coelho" width="400" height="200" loading="lazy" decoding="async">
+      <div class="footer-content">
+        <img class="footer-logo" src="Imagens/otimizadas/logo-michelle-coelho.webp" alt="Michelle Coelho" width="400" height="200" loading="lazy" decoding="async">
 
-      <p class="footer-copy">© 2026 Kit Contrato de Trabalho Inteligente. Todos os direitos reservados.</p>
+        <p class="footer-copy">© 2026 Kit Contrato de Trabalho Inteligente. Todos os direitos reservados.</p>
 
-      <p class="footer-info">
-        Michelle Coelho - Consultoria Empresarial Trabalhista<br>
-        CNPJ 42.735.832/0001-04<br>
-        <a href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a>
-      </p>
+        <p class="footer-info">
+          Michelle Coelho - Consultoria Empresarial Trabalhista<br>
+          CNPJ 42.735.832/0001-04<br>
+          <a href="mailto:michelle@michellecoelho.com.br">michelle@michellecoelho.com.br</a>
+        </p>
+      </div>
     </div>
   </footer>
 
